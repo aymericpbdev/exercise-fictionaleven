@@ -33,7 +33,7 @@ body {
     background-color: var(--background);
 }
 
-/* Accessibility: navigation with keyboard to reduce number of input to get from an element to another by skipping some considered as low interest for some users */
+/* Accessibility: navigation with keyboard to reduce number of input to get from an element to another by skipping some elements considered as low in interest for some users */
 .skip-link {
     position: absolute;
     top: -48px;
