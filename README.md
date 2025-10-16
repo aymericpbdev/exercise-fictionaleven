@@ -1,7 +1,7 @@
 # Web site of a fictional event
 ## **Consigne :** Réaliser une page web pour présenter un événement fictif, tel qu’une conférence, un atelier, ou une fête. 
 ### L’objectif est d’informer et d’inciter à participer en proposant un design clair, attractif et responsive.
-### **Objectif** : Mettre en valeur les éléments-clés d’un événement *(titre, lieu, date, agenda, intervenants)*. <br>
+### **Objectif** : Mettre en valeur les éléments-clés d’un événement *(titre, lieu, date, agenda, intervenants)*.
 ### **Cahier des charges**
 La page doit obligatoirement contenir :
 - Un en-tête ``<header>`` avec le nom, le type d’événement et une illustration *(ex : image du lieu ou logo)*.
