@@ -1,3 +1,12 @@
+/* ========================================
+   CSS STYLESHEET FOR FELICON 2025
+   Linked from index.html via: <link rel="stylesheet" href="styles.css">
+   ======================================== */
+
+/* ========================================
+   GLOBAL STYLES & RESET
+   ======================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,17 +22,24 @@
     --white: #FFFFFF;
     --text-dark: #333333;
     --text-light: #555555;
+    
     /* Spacing system */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
+    
     /* Reusable values */
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.15);
     --transition: 0.3s ease;
+    
+    /* Border radius system */
     --radius: 8px;
+    --radius-card: 12px;
+    --radius-lg: 16px;
+    --radius-pill: 50px;
 }
 
 body {
@@ -33,7 +49,16 @@ body {
     background-color: var(--background);
 }
 
-/* Accessibility: navigation with keyboard to reduce number of input to get from an element to another by skipping some elements considered as low in interest for some users */
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+/* Skip link for keyboard navigation */
 .skip-link {
     position: absolute;
     top: -48px;
@@ -43,17 +68,23 @@ body {
     padding: 0.5rem 1rem;
     z-index: 1000;
     transition: top 0.25s ease;
+    text-decoration: none;
 }
 
 .skip-link:focus {
     top: 0;
 }
 
+/* Focus styles for keyboard navigation */
 a:focus,
 .cta-button:focus {
     outline: 3px solid var(--accent);
     outline-offset: 3px;
 }
+
+/* ========================================
+   HEADER
+   ======================================== */
 
 .header {
     background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
@@ -62,22 +93,6 @@ a:focus,
     text-align: center;
     position: relative;
     overflow: hidden;
-}
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    animation: pulse 15s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(5%, 5%); }
 }
 
 .header-content {
@@ -121,6 +136,10 @@ a:focus,
     opacity: 0.9;
 }
 
+/* ========================================
+   MAIN CONTENT & LAYOUT
+   ======================================== */
+
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -136,6 +155,7 @@ a:focus,
     padding-bottom: var(--spacing-sm);
 }
 
+/* Decorative underline for section titles */
 .section-title::after {
     content: '';
     position: absolute;
@@ -148,7 +168,6 @@ a:focus,
     border-radius: 2px;
 }
 
-/* Event Info Cards */
 .event-info {
     display: flex;
     gap: var(--spacing-md);
@@ -161,13 +180,13 @@ a:focus,
     min-width: 280px;
     background: var(--white);
     padding: var(--spacing-md);
-    border-radius: 12px;
+    border-radius: var(--radius-card);
     box-shadow: var(--shadow);
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: box-shadow var(--transition);
 }
 
+/* Subtle hover effect without movement */
 .info-card:hover {
-    transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -190,8 +209,77 @@ a:focus,
     margin-top: var(--spacing-xs);
 }
 
+/* iframe */
+.map-container {
+    margin-top: var(--spacing-sm);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+}
+
 .agenda-section {
     margin-bottom: var(--spacing-lg);
+}
+
+.agenda-legend {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow);
+}
+
+.legend-title {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.legend-items {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.legend-color {
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid;
+    flex-shrink: 0;
+}
+
+.legend-color.opening { 
+    background: #fef5f5; 
+    border-color: #E74C3C; 
+}
+
+.legend-color.workshop { 
+    background: #f5f9fc; 
+    border-color: #3498DB; 
+}
+
+.legend-color.conference { 
+    background: #f9f6fb; 
+    border-color: #9B59B6; 
+}
+
+.legend-color.break { 
+    background: #f7fcf9; 
+    border-color: var(--accent); 
 }
 
 .agenda-grid {
@@ -210,6 +298,7 @@ a:focus,
     gap: var(--spacing-md);
     align-items: flex-start;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    scroll-margin-top: 100px; /* Offset for smooth link navigation */
 }
 
 .agenda-item:hover {
@@ -217,7 +306,6 @@ a:focus,
     box-shadow: var(--shadow-hover);
 }
 
-/* Color coded agenda types */
 .agenda-item.opening {
     border-left-color: #E74C3C;
     background: linear-gradient(90deg, #fef5f5 0%, var(--white) 100%);
@@ -269,6 +357,24 @@ a:focus,
     margin-top: var(--spacing-xs);
 }
 
+.speaker-link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color var(--transition);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.speaker-link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.speaker-link::after {
+    content: ' →';
+    font-weight: bold;
+}
+
 .speakers-section {
     margin-bottom: var(--spacing-lg);
 }
@@ -282,14 +388,15 @@ a:focus,
 .speaker-card {
     background: var(--white);
     padding: var(--spacing-md);
-    border-radius: 12px;
+    border-radius: var(--radius-card);
     box-shadow: var(--shadow);
     text-align: center;
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: box-shadow var(--transition);
+    scroll-margin-top: 100px; /* Offset for smooth scroll with header */
 }
 
+/* Subtle hover without movement */
 .speaker-card:hover {
-    transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -311,13 +418,31 @@ a:focus,
     user-select: none;
 }
 
-/* Avatar color variations */
-.avatar-orange { background: linear-gradient(135deg, #FF8C42, #FF6B35); }
-.avatar-gray { background: linear-gradient(135deg, #95A5A6, #7F8C8D); }
-.avatar-white { background: linear-gradient(135deg, #ECF0F1, #BDC3C7); color: var(--primary); }
-.avatar-brown { background: linear-gradient(135deg, #D68910, #B9770E); }
-.avatar-black { background: linear-gradient(135deg, #34495E, #2C3E50); }
-.avatar-sage { background: linear-gradient(135deg, var(--accent), #74C69D); }
+/* Avatar colors based on famous cats */
+.avatar-garfield { 
+    background: linear-gradient(135deg, #FF8C00, #FFA500); 
+}
+
+.avatar-felix { 
+    background: linear-gradient(135deg, #1a1a1a, #000000); 
+}
+
+.avatar-grumpy { 
+    background: linear-gradient(135deg, #A0826D, #8B7355); 
+}
+
+.avatar-tom { 
+    background: linear-gradient(135deg, #6B7280, #4B5563); 
+}
+
+.avatar-cheshire { 
+    background: linear-gradient(135deg, #EC4899, #BE185D); 
+}
+
+.avatar-hello-kitty { 
+    background: linear-gradient(135deg, #FFE4E1, #FFB6C1); 
+    color: #FF1493;
+}
 
 .speaker-card h3 {
     color: var(--primary);
@@ -335,14 +460,34 @@ a:focus,
     color: var(--text-light);
     font-size: 0.95rem;
     line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
 }
 
-/* Call To Action */
+.back-to-agenda {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-decoration: none;
+    transition: color var(--transition);
+    font-weight: 600;
+}
+
+.back-to-agenda:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.back-to-agenda::before {
+    content: '← ';
+    font-weight: bold;
+}
+
 .cta-section {
     background: linear-gradient(135deg, var(--secondary) 0%, #E74C3C 100%);
     color: var(--white);
     padding: var(--spacing-lg);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     text-align: center;
     margin-bottom: var(--spacing-lg);
     box-shadow: var(--shadow-hover);
@@ -373,7 +518,7 @@ a:focus,
     font-size: 1.3rem;
     font-weight: 700;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: var(--radius-pill);
     margin: var(--spacing-md) 0;
     transition: transform var(--transition), box-shadow var(--transition);
     box-shadow: var(--shadow);
@@ -465,6 +610,11 @@ a:focus,
     .speakers-grid {
         grid-template-columns: 1fr;
     }
+    
+    .legend-items {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
 }
 
 @media (max-width: 480px) {
@@ -494,5 +644,9 @@ a:focus,
     
     .main-content {
         padding: var(--spacing-sm);
+    }
+    
+    .map-container iframe {
+        height: 200px;
     }
 }

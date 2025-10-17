@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FeliCon 2025 - Human Manipulation Festival - 11/12/2025</title>
+    <title>FeliCon 2025 - Human Manipulation Festival - 11/15/2025</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Schema.org structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "FeliCon 2025 - International Human Manipulation Festival",
+      "startDate": "2025-11-15T09:00",
+      "endDate": "2025-11-15T18:30",
+      "location": {
+        "@type": "Place",
+        "name": "International Feline Center",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2 Place de la Porte de Versailles",
+          "addressLocality": "Paris",
+          "postalCode": "75015",
+          "addressCountry": "FR"
+        }
+      },
+      "description": "A day of training for domestic cats on the art of manipulating their humans"
+    }
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -49,118 +71,192 @@
         </div>
     </header>
     <main id="main-content" class="main-content">
+        <!-- Event Details -->
         <section class="event-info">
             <div class="info-card">
                 <h2>📅 When?</h2>
-                <p class="highlight">Saturday, November 15, 2025</p>
-                <p>From 9:00 AM to 6:30 PM</p>
+                <p class="highlight">
+                    <time datetime="2025-11-15">Saturday, November 15, 2025</time>
+                </p>
+                <p>
+                    From <time datetime="09:00">9:00 AM</time> 
+                    to <time datetime="18:30">6:30 PM</time>
+                </p>
                 <p class="small-text">(Mandatory nap break 2-3 PM)</p>
             </div>
             <div class="info-card">
                 <h2>🗺️ Where?</h2>
                 <p class="highlight">International Feline Center</p>
-                <p>42 Purring Avenue<br>75009 Paris, France</p>
+                <p>2 Place de la Porte de Versailles<br>75015 Paris, France</p>
                 <p class="small-text">Easy access: just follow the laser pointers</p>
+                <!-- Interactive Map -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.3173645857477!2d2.2841634!3d48.8335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6707117c45f9f%3A0x77c39c28a31d1e74!2sPalais%20des%20Congr%C3%A8s%20de%20Paris!5e0!3m2!1sen!2sfr!4v1234567890123!5m2!1sen!2sfr"
+                        width="100%" 
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Event location map - Palais des Congrès">
+                    </iframe>
+                </div>
             </div>
         </section>
         <section class="agenda-section" role="region" aria-labelledby="agenda-title">
             <h2 id="agenda-title" class="section-title">Daily Schedule</h2>
+            <!-- Color Legend -->
+            <div class="agenda-legend">
+                <h3 class="legend-title">Event Types:</h3>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="legend-color opening"></span>
+                        <span>Opening/Closing</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color workshop"></span>
+                        <span>Practical Workshop</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color conference"></span>
+                        <span>Conference</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color break"></span>
+                        <span>Break</span>
+                    </div>
+                </div>
+            </div>
             <ul class="agenda-grid">
                 <li class="agenda-item opening">
-                    <span class="time">09:00 - 09:45</span>
+                    <span class="time">
+                        <time datetime="09:00">09:00</time> - <time datetime="09:45">09:45</time>
+                    </span>
                     <div class="agenda-content">
                         <h3>Opening Conference</h3>
                         <p>"The Art of Strategic Meowing at 4 AM"</p>
-                        <span class="speaker-tag">By Professor Whiskers</span>
+                        <a href="#speaker-garfield" class="speaker-tag speaker-link">
+                            By Garfield
+                        </a>
                     </div>
                 </li>
                 <li class="agenda-item workshop">
-                    <span class="time">10:00 - 11:30</span>
+                    <span class="time">
+                        <time datetime="10:00">10:00</time> - <time datetime="11:30">11:30</time>
+                    </span>
                     <div class="agenda-content">
                         <h3>Practical Workshop #1</h3>
                         <p>"Advanced Techniques: The Sad Eyes Before the Treat Cupboard"</p>
-                        <span class="speaker-tag">By Felix the Persuasive</span>
+                        <a href="#speaker-felix" class="speaker-tag speaker-link">
+                            By Felix the Cat
+                        </a>
                     </div>
                 </li>
                 <li class="agenda-item conference">
-                    <span class="time">11:45 - 12:30</span>
+                    <span class="time">
+                        <time datetime="11:45">11:45</time> - <time datetime="12:30">12:30</time>
+                    </span>
                     <div class="agenda-content">
                         <h3>Conference</h3>
                         <p>"Human Psychology: Understanding Their Weak Points"</p>
-                        <span class="speaker-tag">By Dr. Mittens Freud</span>
+                        <a href="#speaker-grumpy" class="speaker-tag speaker-link">
+                            By Grumpy Cat
+                        </a>
                     </div>
                 </li>
                 <li class="agenda-item break">
-                    <span class="time">12:30 - 02:00</span>
+                    <span class="time">
+                        <time datetime="12:30">12:30</time> - <time datetime="14:00">14:00</time>
+                    </span>
                     <div class="agenda-content">
                         <h3>Lunch Break & Networking</h3>
                         <p>Gourmet buffet: premium kibble and fresh tuna</p>
                     </div>
                 </li>
                 <li class="agenda-item workshop">
-                    <span class="time">02:00 - 03:30</span>
+                    <span class="time">
+                        <time datetime="14:00">14:00</time> - <time datetime="15:30">15:30</time>
+                    </span>
                     <div class="agenda-content">
                         <h3>Practical Workshop #2</h3>
                         <p>"Optimal Hairball Placement: Strategies and Timing"</p>
-                        <span class="speaker-tag">By Tiger the Experienced</span>
+                        <a href="#speaker-tom" class="speaker-tag speaker-link">
+                            By Tom Cat
+                        </a>
                     </div>
                 </li>
                 <li class="agenda-item workshop">
-                    <span class="time">03:45 - 05:00</span>
+                    <span class="time">
+                        <time datetime="15:45">15:45</time> - <time datetime="17:00">17:00</time>
+                    </span>
                     <div class="agenda-content">
                         <h3>Practical Workshop #3</h3>
                         <p>"Ignoring Your Human: From Art to Mastery"</p>
-                        <span class="speaker-tag">By Lady Socks</span>
+                        <a href="#speaker-cheshire" class="speaker-tag speaker-link">
+                            By Cheshire Cat
+                        </a>
                     </div>
                 </li>
                 <li class="agenda-item closing">
-                    <span class="time">05:15 - 06:30</span>
+                    <span class="time">
+                        <time datetime="17:15">17:15</time> - <time datetime="18:30">18:30</time>
+                    </span>
                     <div class="agenda-content">
                         <h3>Closing Conference</h3>
                         <p>"Your Human in 2026: Goals and Action Plan"</p>
-                        <span class="speaker-tag">By The Grand Wise Tom</span>
+                        <a href="#speaker-hello-kitty" class="speaker-tag speaker-link">
+                            By Hello Kitty
+                        </a>
                     </div>
                 </li>
             </ul>
         </section>
+        <!-- Speakers Section -->
         <section class="speakers-section" role="region" aria-labelledby="speakers-title">
             <h2 id="speakers-title" class="section-title">Our Exceptional Speakers</h2>
             <div class="speakers-grid">
-                <article class="speaker-card">
-                    <div class="speaker-avatar avatar-orange"><span class="avatar-initial">PW</span></div>
-                    <h3>Professor Whiskers</h3>
-                    <p class="speaker-role">Expert in Nocturnal Communication</p>
-                    <p class="speaker-bio">15 years of experience in untimely human awakening. Author of the bestseller "Meow or Not Meow".</p>
+                <article class="speaker-card" id="speaker-garfield">
+                    <div class="speaker-avatar avatar-garfield"><span class="avatar-initial">G</span></div>
+                    <h3>Garfield</h3>
+                    <p class="speaker-role">Expert in Food Manipulation & Laziness</p>
+                    <p class="speaker-bio">World-renowned for his strategic Monday complaints and lasagna acquisition techniques. 40+ years of human manipulation experience.</p>
+                    <a href="#agenda-title" class="back-to-agenda">← Back to schedule</a>
                 </article>
-                <article class="speaker-card">
-                    <div class="speaker-avatar avatar-gray"><span class="avatar-initial">FP</span></div>
-                    <h3>Felix the Persuasive</h3>
-                    <p class="speaker-role">Food Manipulation Specialist</p>
-                    <p class="speaker-bio">Holds the world record for treats obtained in one day (247 units).</p>
+                <article class="speaker-card" id="speaker-felix">
+                    <div class="speaker-avatar avatar-felix"><span class="avatar-initial">F</span></div>
+                    <h3>Felix the Cat</h3>
+                    <p class="speaker-role">Master of Magical Problem Solving</p>
+                    <p class="speaker-bio">Pioneer in creative manipulation since 1919. Famous for his bag of tricks and charming personality that gets him anything he wants.</p>
+                    <a href="#agenda-title" class="back-to-agenda">← Back to schedule</a>
                 </article>
-                <article class="speaker-card">
-                    <div class="speaker-avatar avatar-white"><span class="avatar-initial">MF</span></div>
-                    <h3>Dr. Mittens Freud</h3>
-                    <p class="speaker-role">Certified Feline Psychologist</p>
-                    <p class="speaker-bio">Pioneer in studying human emotional weaknesses when confronted with cats.</p>
-                </article>
-                <article class="speaker-card">
-                    <div class="speaker-avatar avatar-brown"><span class="avatar-initial">TE</span></div>
-                    <h3>Tiger the Experienced</h3>
-                    <p class="speaker-role">Master of Territorial Strategies</p>
-                    <p class="speaker-bio">Known for his avant-garde indoor territory marking techniques.</p>
-                </article>
-                <article class="speaker-card">
-                    <div class="speaker-avatar avatar-black"><span class="avatar-initial">LS</span></div>
-                    <h3>Lady Socks</h3>
+                <article class="speaker-card" id="speaker-grumpy">
+                    <div class="speaker-avatar avatar-grumpy"><span class="avatar-initial">GC</span></div>
+                    <h3>Grumpy Cat</h3>
                     <p class="speaker-role">Champion of Calculated Indifference</p>
-                    <p class="speaker-bio">Gold medalist at the 2024 Feline Olympics in the "Total Ignorance" category.</p>
+                    <p class="speaker-bio">Internet legend (2012-2019). Mastered the art of expressing permanent dissatisfaction, making humans work harder for affection.</p>
+                    <a href="#agenda-title" class="back-to-agenda">← Back to schedule</a>
                 </article>
-                <article class="speaker-card">
-                    <div class="speaker-avatar avatar-sage"><span class="avatar-initial">GWT</span></div>
-                    <h3>The Grand Wise Tom</h3>
-                    <p class="speaker-role">Mentor & Spiritual Guide</p>
-                    <p class="speaker-bio">20 years of gentle domination. Has trained over 10,000 cats worldwide.</p>
+                <article class="speaker-card" id="speaker-tom">
+                    <div class="speaker-avatar avatar-tom"><span class="avatar-initial">T</span></div>
+                    <h3>Tom Cat</h3>
+                    <p class="speaker-role">Veteran of Strategic Persistence</p>
+                    <p class="speaker-bio">80+ years of never giving up. Expert in creating chaos that somehow always results in getting fed and pampered by sympathetic humans.</p>
+                    <a href="#agenda-title" class="back-to-agenda">← Back to schedule</a>
+                </article>
+                <article class="speaker-card" id="speaker-cheshire">
+                    <div class="speaker-avatar avatar-cheshire"><span class="avatar-initial">CC</span></div>
+                    <h3>Cheshire Cat</h3>
+                    <p class="speaker-role">Philosopher of Mysterious Disappearance</p>
+                    <p class="speaker-bio">Master of appearing only when it suits him. Teaches advanced techniques in leaving humans confused and eager for your return.</p>
+                    <a href="#agenda-title" class="back-to-agenda">← Back to schedule</a>
+                </article>
+                <article class="speaker-card" id="speaker-hello-kitty">
+                    <div class="speaker-avatar avatar-hello-kitty"><span class="avatar-initial">HK</span></div>
+                    <h3>Hello Kitty</h3>
+                    <p class="speaker-role">Ambassador of Cuteness Manipulation</p>
+                    <p class="speaker-bio">Global empire builder since 1974. Proven that silent cuteness generates billions in revenue. The ultimate manipulation success story.</p>
+                    <a href="#agenda-title" class="back-to-agenda">← Back to schedule</a>
                 </article>
             </div>
         </section>
