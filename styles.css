@@ -39,7 +39,6 @@ body {
 }
 
 /* ACCESSIBILITY */
-
 .skip-link {
     position: absolute;
     top: -48px;
@@ -66,8 +65,6 @@ a:focus,
     outline: 3px solid var(--color-accent);
     outline-offset: 2px;
 }
-
-/* HEADER */
 
 .site-header {
     position: relative;
@@ -123,8 +120,6 @@ a:focus,
     opacity: 0.9;
 }
 
-/* MAIN CONTENT */
-
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -152,8 +147,6 @@ a:focus,
     border-radius: 2px;
     transform: translateX(-50%);
 }
-
-/* EVENT INFO SECTION */
 
 .event-info-section {
     display: flex;
@@ -201,8 +194,6 @@ a:focus,
     display: block;
     width: 100%;
 }
-
-/* AGENDA SECTION */
 
 .agenda-section {
     margin-bottom: var(--spacing-lg);
@@ -342,8 +333,6 @@ a:focus,
     font-weight: bold;
 }
 
-/* SPEAKERS SECTION */
-
 .speakers-section {
     margin-bottom: var(--spacing-lg);
 }
@@ -445,8 +434,6 @@ a:focus,
     font-weight: bold;
 }
 
-/* CTA SECTION */
-
 .cta-section {
     margin-bottom: var(--spacing-lg);
     padding: var(--spacing-lg);
@@ -499,8 +486,6 @@ a:focus,
     opacity: 0.9;
 }
 
-/* FOOTER */
-
 .site-footer {
     margin-top: var(--spacing-xl);
     padding: var(--spacing-lg) var(--spacing-md);
@@ -550,8 +535,6 @@ a:focus,
     font-size: 0.95rem;
     text-align: center;
 }
-
-/* MEDIA QUERIES */
 
 @media (max-width: 768px) {
     .event-title {
@@ -632,4 +615,5 @@ a:focus,
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+
 }
