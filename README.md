@@ -1,4 +1,5 @@
 # Web site of a fictional event
+## DEMO: https://aymericpbdev.github.io/exercise-fictionalevent/
 ## **Consigne :** Réaliser une page web pour présenter un événement fictif, tel qu’une conférence, un atelier, ou une fête. 
 ### L’objectif est d’informer et d’inciter à participer en proposant un design clair, attractif et responsive.
 ### **Objectif** : Mettre en valeur les éléments-clés d’un événement *(titre, lieu, date, agenda, intervenants)*.
